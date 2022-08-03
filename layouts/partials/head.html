@@ -61,7 +61,10 @@
 
 {{- /* Favicons */}}
 <link rel="icon" href="{{ site.Params.favicon | default "favicon.ico" | absURL }}">
+<link rel="icon" href="{{ site.Params.favicon_svg | default "favicon.svg" | absURL }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ site.Params.appleTouchIcon | default "apple-touch-icon.png" | absURL }}">
+
+<link rel="manifest" href="/manifest.webmanifest">
 
 {{- /* RSS */}}
 {{ range .AlternativeOutputFormats -}}
